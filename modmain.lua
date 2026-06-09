@@ -7,6 +7,7 @@ local BOSS_POWER = GetModConfigData("BOSS_POWER") or 1.0
 local ELITE_CHANCE = GetModConfigData("ELITE_CHANCE") or 0.05
 local ENABLE_CONTROL_EFFECTS = GetModConfigData("ENABLE_CONTROL_EFFECTS")
 local ENABLE_SIZE_CHANGE = GetModConfigData("ENABLE_SIZE_CHANGE")
+local ENABLE_COLOR_CHANGE = GetModConfigData("ENABLE_COLOR_CHANGE")
 local ENABLE_DAMAGE_REDUCTION = GetModConfigData("ENABLE_DAMAGE_REDUCTION")
 local EARLY_GAME_PROTECTION_DAYS = GetModConfigData("EARLY_GAME_PROTECTION_DAYS") or 10
 local SHOW_AFFIX_NAMES = GetModConfigData("SHOW_AFFIX_NAMES")
@@ -165,6 +166,7 @@ local function ApplyMutation(inst)
         power = total_power,
         show_names = SHOW_AFFIX_NAMES,
         enable_size = ENABLE_SIZE_CHANGE and not IMMOBILE_MOBS[inst.prefab],
+        enable_color = ENABLE_COLOR_CHANGE,
         enable_reduction = ENABLE_DAMAGE_REDUCTION,
         enable_control = ENABLE_CONTROL_EFFECTS,
         elite_chance = ELITE_CHANCE,

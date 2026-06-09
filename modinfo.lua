@@ -1,7 +1,7 @@
 name = "荒野异化"
 description = "随机强化生物，重塑生存挑战\nWild Mutation: Randomly strengthen creatures, reshaping survival challenges."
 author = "我好慌"
-version = "0.1.0"
+version = "0.1.1"
 
 forumthread = ""
 api_version = 10
@@ -80,6 +80,16 @@ configuration_options = {
         name = "ENABLE_SIZE_CHANGE",
         label = "体型变化",
         hover = "是否允许生物随机改变体型大小",
+        options = {
+            {description = "启用", data = true},
+            {description = "关闭", data = false},
+        },
+        default = true,
+    },
+    {
+        name = "ENABLE_COLOR_CHANGE",
+        label = "颜色变化",
+        hover = "是否允许生物根据词条改变颜色",
         options = {
             {description = "启用", data = true},
             {description = "关闭", data = false},

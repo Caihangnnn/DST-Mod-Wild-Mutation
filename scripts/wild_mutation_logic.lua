@@ -142,6 +142,7 @@ local function ApplyMutationLogic(inst, config)
     local base_power = config.power
     local show_names = config.show_names
     local enable_size = config.enable_size
+    local enable_color = config.enable_color ~= false
     local enable_reduction = config.enable_reduction
     local enable_control = config.enable_control
     local elite_chance = config.elite_chance
@@ -362,7 +363,7 @@ local function ApplyMutationLogic(inst, config)
     end
 
     -- 视觉效果
-    if inst.AnimState and #applied_affixes > 0 then
+    if enable_color and inst.AnimState and #applied_affixes > 0 then
         local r, g, b, a = 1, 1, 1, 1
         for _, affix in ipairs(applied_affixes) do
             r = r * affix.color[1]
